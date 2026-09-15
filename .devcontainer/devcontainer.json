@@ -1,0 +1,29 @@
+{
+    "name": "Linux-Dev-Env",
+    "image": "ghcr.io/it-is-lokesh/docker-containers/linux-container:latest",
+    // "image": "rl-pytorch",
+    
+    // Automatically mounts your local folder to /workspace in the container
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    
+    // Pass GPU flags to the container
+    // "runArgs": [
+    //     "--gpus=all",
+    //     "--shm-size=2gb",
+    //     "--hostname=linux-container"
+    // ],
+
+    "remoteUser": "linux",
+
+    // Installs these extensions automatically inside the container
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}

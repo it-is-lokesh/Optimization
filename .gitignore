@@ -1,0 +1,6 @@
+add all executables, assembly files, and object files
+*.out
+*.s
+*.o
+.DS_Store
+/build/
